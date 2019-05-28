@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(gcvm_maxflow)
+file(GLOB SOURCES "*.cpp")
+file(GLOB_RECURSE INCS "*.h")
+include_directories("${PROJECT_BINARY_DIR}")
+add_definitions ("-static -lm -s -x c++ -Wl,--stack=268435456 -O3 -std=c++17")
+add_executable(gcvm_maxflow ${SOURCES} ${INCS})
