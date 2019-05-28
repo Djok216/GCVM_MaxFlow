@@ -78,11 +78,12 @@ T PushRelabel<T>::getMaxFlow(int source, int sink) {
   for (std::vector<int> v = getMHV(); v.size(); v = getMHV()) {
     for (int from : v) {
       bool pushed = false;
-      for (int to = 0; to < n && exc[from] > 0; ++to)
+      for (int to = 0; to < n && exc[from] > 0; ++to) {
         if (cap[from][to] - flow[from][to] > 0 && h[from] == h[to] + 1) {
           push(from, to);
           pushed = true;
         }
+      }
       if (!pushed) {
         relabel(from);
         break;
