@@ -20,6 +20,15 @@ void PushRelabel<T>::clearNetwork() {
 }
 
 template<typename T>
+void PushRelabel<T>::clearFlow() {
+  for (auto &it : flow) {
+    it.assign(it.size(), 0);
+  }
+  h.assign(h.size(), 0);
+  exc.assign(exc.size(), 0);
+}
+
+template<typename T>
 void PushRelabel<T>::addEdge(int from, int to, int cap) {
   this->cap[from][to] += cap;
 }

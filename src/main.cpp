@@ -10,5 +10,8 @@ int main() {
   alg.addEdge(1, 3, 6);
   alg.addEdge(2, 3, 4);
   assert(alg.getMaxFlow(0, 3) == 8);
+  assert(alg.getMaxFlow(0, 3) == 8);
+  alg.clearFlow();
+  assert(alg.getMaxFlow(0, 3) == 8);
   return 0;
 }

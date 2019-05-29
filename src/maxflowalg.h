@@ -6,6 +6,7 @@ class MaxFlowAlg {
 public:
   virtual T getMaxFlow(int source, int sink) = 0;
   virtual void clearNetwork() = 0;
+  virtual void clearFlow() = 0;
   virtual void addEdge(int from, int to, int cap) = 0;
 };
 #endif

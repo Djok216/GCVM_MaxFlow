@@ -4,3 +4,4 @@ Makefile
 CMakefile
 CMakeCache.txt
 CMakeFiles
+*.bat

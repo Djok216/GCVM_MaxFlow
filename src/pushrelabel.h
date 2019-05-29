@@ -11,6 +11,7 @@ public:
   PushRelabel(int n = 0);
   virtual T getMaxFlow(int source, int sink);
   virtual void clearNetwork();
+  virtual void clearFlow();
   virtual void addEdge(int from, int to, int cap);
 
 private:
